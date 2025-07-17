@@ -1,0 +1,50 @@
+.div1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+}
+
+.div2 {
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
+}
+The box-sizing property solves this problem.
+
+With the CSS box-sizing Property
+The box-sizing property allows us to include the padding and border in an element's total width and height.
+
+If you set box-sizing: border-box; on an element, padding and border are included in the width and height:
+
+Both divs are the same size now!
+
+Hooray!
+
+Here is the same example as above, with box-sizing: border-box; added to both <div> elements:
+
+Example
+.div1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+
+.div2 {
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+Since the result of using the box-sizing: border-box; is so much better, many developers want all elements on their pages to work this way.
+
+The code below ensures that all elements are sized in this more intuitive way. Many browsers already use box-sizing: border-box; for many form elements (but not all - which is why inputs and text areas look different at width: 100%;).
+
+Applying this to all elements is safe and wise:
+
+Example
+* {
+  box-sizing: border-box;
+}

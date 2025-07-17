@@ -1,0 +1,57 @@
+div {
+  column-count: 3;
+}
+CSS Specify the Gap Between Columns
+The column-gap property specifies the gap between the columns.
+
+The following example specifies a 40 pixels gap between the columns:
+
+Example
+div {
+  column-gap: 40px;
+}
+CSS Column Rules
+The column-rule-style property specifies the style of the rule between columns:
+
+Example
+div {
+  column-rule-style: solid;
+}
+The column-rule-width property specifies the width of the rule between columns:
+
+Example
+div {
+  column-rule-width: 1px;
+}
+The column-rule-color property specifies the color of the rule between columns:
+
+Example
+div {
+  column-rule-color: lightblue;
+}
+The column-rule property is a shorthand property for setting all the column-rule-* properties above.
+
+The following example sets the width, style, and color of the rule between columns:
+
+Example
+div {
+  column-rule: 1px solid lightblue;
+}
+Specify How Many Columns an Element Should Span
+The column-span property specifies how many columns an element should span across.
+
+The following example specifies that the <h2> element should span across all columns:
+
+Example
+h2 {
+  column-span: all;
+}
+Specify The Column Width
+The column-width property specifies a suggested, optimal width for the columns.
+
+The following example specifies that the suggested, optimal width for the columns should be 100px:
+
+Example
+div {
+  column-width: 100px;
+}

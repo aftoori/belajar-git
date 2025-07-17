@@ -1,0 +1,63 @@
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+}
+2. Provide High Contrast
+Always use high contrast between text and background to ensure readability.
+
+Good Contrast Example
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+Poor Contrast Example
+body {
+  background-color: #eeeeee;
+  color: #cccccc;
+}
+ADVERTISEMENT
+
+3. Avoid Styling that Hides Focus
+Never remove outlines without replacing them with another visible focus style.
+
+Bad Example
+button:focus {
+  outline: none;
+}
+Better Example
+button:focus {
+  outline: 2px solid blue;
+}
+4. Use Semantic HTML + CSS
+Use semantic elements instead of using non-semantic tags like <div> for everything.
+
+Example
+nav {
+  background-color: #333333;
+  color: white;
+}
+aside {
+  background-color: #333333;
+  color: white;
+}
+5. Respect User Preferences
+The CSS prefers-reduced-motion media feature lets you check if a user has asked to reduce motion, such as animations or transitions.
+
+Some users have motion sensitivity and prefer websites with less animation. You can use this media query to turn off or tone down animations when needed:
+
+Example
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+You will learn more about media queries in a later chapter.
+
+Summary
+Keep focus outlines visible
+Maintain good color contrast
+Use semantic HTML elements
+Respect motion preferences

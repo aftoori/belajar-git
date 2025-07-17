@@ -1,0 +1,22 @@
+video {
+  width: 100%;
+  height: auto;
+}
+Notice that in the example above, the video player can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the max-width property instead.
+
+Using The max-width Property
+If the max-width property is set to 100%, the video player will scale down if it has to, but never scale up to be larger than its original size:
+
+Example
+video {
+  max-width: 100%;
+  height: auto;
+}
+Add a Video to the Example Web Page
+We want to add a video in our example web page. The video will be resized to always take up all the available space:
+
+Example
+video {
+  width: 100%;
+  height: auto;
+}

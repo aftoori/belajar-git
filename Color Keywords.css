@@ -1,0 +1,58 @@
+body {
+  background-image: url("paper.gif");
+}
+
+div {
+  background-color: transparent;
+}
+Note: The transparent keyword is equivalent to rgba(0,0,0,0). RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity for a color. Read more in our CSS RGB chapter and in our CSS Colors chapter.
+
+
+The currentcolor Keyword
+The currentcolor keyword is like a variable that holds the current value of the color property of an element.
+
+This keyword can be useful if you want a specific color to be consistent in an element or a page.
+
+Example
+In this example the border color of the <div> element will be blue, because the text color of the <div> element is blue:
+
+div {
+  color: blue;
+  border: 10px solid currentcolor;
+}
+Example
+In this example the <div>'s background color is set to the current color value of the body element:
+
+body {
+  color: purple;
+}
+
+div {
+  background-color: currentcolor;
+}
+Example
+In this example the <div>'s border color and shadow color is set to the current color value of the body element:
+
+body {
+ color: green;
+}
+
+div {
+  box-shadow: 0px 0px 15px currentcolor;
+  border: 5px solid currentcolor;
+}
+The inherit Keyword
+The inherit keyword specifies that a property should inherit its value from its parent element.
+
+The inherit keyword can be used for any CSS property, and on any HTML element.
+
+Example
+In this example the <span>'s border settings will be inherited from the parent element: 
+
+div {
+  border: 2px solid red;
+}
+
+span {
+  border: inherit
+}

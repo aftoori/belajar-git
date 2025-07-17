@@ -1,0 +1,404 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+The grid-template-columns property can also be used to specify the exact size (width) of the columns, or a mix of fixed size and auto.
+
+Example
+Set a fixed size for column 1, 2, and 4, and keep column 3 as auto size:
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 80px 200px auto 40px;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Note: If you have more than 4 grid items in a 4 columns grid, the grid will automatically add a new row to put the items in.
+
+Cell Sizing with the fr Unit
+The fr unit can be used when defining grids, like any other CSS length such as %, px or em.
+
+The fr unit stands for "fraction". This unit automatically divides the available space into fractions.
+
+Example: 1fr will take 1 fraction of the available space, while 2fr will take 2 fractions of the available space.
+
+Example
+Here, each column will take up 25% of the container width, splitting it equally:
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+Here, the second column will be twice as big as the others:
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+The grid-template-rows Property
+The grid-template-rows property defines the height of each row.
+
+The value is a space-separated-list, where each value defines the height of the respective row:
+
+Example
+.grid-container {
+  display: grid;
+  grid-template-rows: 80px 200px;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Notice that the first row in the grid above is 80px high and the second row is 200px high. The next rows will use auto as default.
+
+ADVERTISEMENT
+
+The justify-content Property
+The justify-content property is used to align the grid items when they do not use all available space on the main-axis (horizontally).
+
+The justify-content property can have one of the following values:
+
+space-evenly
+space-around
+space-between
+center
+start
+end
+Note: The grid item's total width has to be less than the container's width for the justify-content property to have any effect.
+
+Example
+The space-evenly value displays the grid items with equal space around them:
+
+.grid-container {
+  display: grid;
+  justify-content: space-evenly;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+The space-around value displays the grid items with space around them:
+
+.grid-container {
+  display: grid;
+  justify-content: space-around;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+The space-between value displays the grid items with space between them:
+
+.grid-container {
+  display: grid;
+  justify-content: space-between;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+The center value positions the grid items in the center of the container: 
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+The start value positions the grid items at the start of the container:
+
+.grid-container {
+  display: grid;
+  justify-content: start;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+The end value positions the grid items at the end of the container:
+
+.grid-container {
+  display: grid;
+  justify-content: end;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+The align-content Property
+The align-content property is used to align the grid items when they do not use all available space on the cross-axis (vertically).
+
+The align-content property can have one of the following values:
+
+space-evenly
+space-around
+space-between
+center
+start
+end
+Note: The grid item's total height has to be less than the container's height for the align-content property to have any effect.
+
+In the following examples we use a 400 pixels high container, to better demonstrate the align-content property.
+
+Example
+The center value positions the grid items in the middle of the container:
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  align-content: center;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+With space-evenly, the grid lines are evenly distributed in the grid container, with equal space on top, bottom and between:
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  align-content: space-evenly;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+With space-around, the space between the grid lines are equal, but the space before the first grid item and after the last grid item is set to half of the space between the grid lines:
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  align-content: space-around;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+With space-between, the space between the grid lines are equal, but the first grid item is flush with the start edge of the container, and the last grid item is flush with the end edge of the container:
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  align-content: space-between;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+The start value positions the grid items at the start of the container:
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  align-content: start;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+The end value positions the grid items at the end of the container:
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  align-content: end;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+The place-content Property
+The place-content property is a shorthand property for the align-content and the justify-content properties.
+
+If the place-content property has two values:
+
+place-content: start center; - the align-content value is 'start' and justify-content value is 'center'
+If the place-content property has one value:
+
+place-content: end; - both align-content and justify-content values are 'end'
+Note: The grid item's total height and width has to be less than the container's height and width for the place-content property to have any effect.
+
+Example
+The center value positions the grid items in the middle of the container (both vertically and horizontally):
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  place-content: center;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Example
+The end space-between value aligns the grid lines towards the bottom of the grid container, and aligns the grid items with the same space between them horizontally:
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  place-content: end space-between;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+

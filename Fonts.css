@@ -1,0 +1,457 @@
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+p {
+font-family: Tahoma, Verdana, sans-serif;
+}
+Best Web Safe Fonts for HTML and CSS
+The following list are the best web safe fonts for HTML and CSS:
+
+Arial (sans-serif)
+Verdana (sans-serif)
+Tahoma (sans-serif)
+Trebuchet MS (sans-serif)
+Times New Roman (serif)
+Georgia (serif)
+Garamond (serif)
+Courier New (monospace)
+Brush Script MT (cursive)
+Note: Before you publish your website, always check how your fonts appear on different browsers and devices, and always use fallback fonts!
+
+ADVERTISEMENT
+
+Arial (sans-serif)
+Arial is the most widely used font for both online and printed media. Arial is also the default font in Google Docs.
+
+Arial is one of the safest web fonts, and it is available on all major operating systems.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Verdana (sans-serif)
+Verdana is a very popular font. Verdana is easily readable even for small font sizes.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Tahoma (sans-serif)
+The Tahoma font has less space between the characters.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Trebuchet MS (sans-serif)
+Trebuchet MS was designed by Microsoft in 1996. Use this font carefully. Not supported by all mobile operating systems.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Times New Roman (serif)
+Times New Roman is one of the most recognizable fonts in the world. It looks professional and is used in many newspapers and "news" websites. It is also the primary font for Windows devices and applications.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Georgia (serif)
+Georgia is an elegant serif font. It is very readable at different font sizes, so it is a good candidate for mobile-responsive design.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Garamond (serif)
+Garamond is a classical font used for many printed books. It has a timeless look and good readability.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Courier New (monospace)
+Courier New is the most widely used monospace serif font. Courier New is often used with coding displays, and many email providers use it as their default font. Courier New is also the standard font for movie screenplays.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Brush Script MT (cursive)
+The Brush Script MT font was designed to mimic handwriting. It is elegant and sophisticated, but can be hard to read. Use it carefully.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Commonly Used Font Fallbacks
+Below are some commonly used font fallbacks, organized by the 5 generic font families:
+
+Serif
+Sans-serif
+Monospace
+Cursive
+Fantasy
+Serif Fonts
+font-family	Example text	Code
+"Times New Roman", Times, serif	
+This is a Heading
+This is a paragraph.
+
+Georgia, serif	
+This is a Heading
+This is a paragraph.
+
+Garamond, serif	
+This is a Heading
+This is a paragraph.
+
+Sans-Serif Fonts
+font-family	Example text	Code
+Arial, Helvetica, sans-serif	
+This is a Heading
+This is a paragraph.
+
+Tahoma, Verdana, sans-serif	
+This is a Heading
+This is a paragraph.
+
+"Trebuchet MS", Helvetica, sans-serif	
+This is a Heading
+This is a paragraph.
+
+Geneva, Verdana, sans-serif	
+This is a Heading
+This is a paragraph.
+
+Monospace Fonts
+font-family	Example text	Code
+"Courier New", Courier, monospace	
+This is a Heading
+This is a paragraph.
+
+Cursive Fonts
+font-family	Example text	Code
+"Brush Script MT", cursive	
+This is a Heading
+This is a paragraph.
+
+Fantasy Fonts
+font-family	Example text	Code
+Copperplate, Papyrus, fantasy	
+This is a Heading
+This is a paragraph.
+
+Tip: Also check out all available Google Fonts and how to use them.
+
+p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}
+Font Weight
+The font-weight property specifies the weight of a font:
+
+Example
+p.normal {
+  font-weight: normal;
+}
+
+p.thick {
+  font-weight: bold;
+}
+Font Variant
+The font-variant property specifies whether or not a text should be displayed in a small-caps font.
+
+In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.
+
+Example
+p.normal {
+  font-variant: normal;
+}
+
+p.small {
+  font-variant: small-caps;
+}
+Exercise
+?
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+Tip: If you use pixels, you can still use the zoom tool to resize the entire page.
+
+Set Font Size With Em
+To allow users to resize the text (in the browser menu), many developers use em instead of pixels.
+
+1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.
+
+The size can be calculated from pixels to em using this formula: pixels/16=em
+
+Example
+h1 {
+  font-size: 2.5em; /* 40px/16=2.5em */
+}
+
+h2 {
+  font-size: 1.875em; /* 30px/16=1.875em */
+}
+
+p {
+  font-size: 0.875em; /* 14px/16=0.875em */
+}
+In the example above, the text size in em is the same as the previous example in pixels. However, with the em size, it is possible to adjust the text size in all browsers.
+
+Unfortunately, there is still a problem with older versions of Internet Explorer. The text becomes larger than it should when made larger, and smaller than it should when made smaller.
+
+ADVERTISEMENT
+
+Use a Combination of Percent and Em
+The solution that works in all browsers, is to set a default font-size in percent for the <body> element:
+
+Example
+body {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
+}
+Our code now works great! It shows the same text size in all browsers, and allows all browsers to zoom or resize the text!
+
+Responsive Font Size
+The text size can be set with a vw unit, which means the "viewport width".
+
+That way the text size will follow the size of the browser window:
+
+Hello World
+Resize the browser window to see how the font size scales.
+
+Example
+<h1 style="font-size:10vw">Hello World</h1>
+Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+}
+</style>
+</head>
+Result:
+
+Sofia Font
+Lorem ipsum dolor sit amet.
+
+123456790
+
+Example
+Here, we want to use a font named "Trirong" from Google Fonts:
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style>
+body {
+  font-family: "Trirong", serif;
+}
+</style>
+</head>
+Result:
+
+Trirong Font
+Lorem ipsum dolor sit amet.
+
+123456790
+
+Example
+Here, we want to use a font named "Audiowide" from Google Fonts:
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<style>
+body {
+  font-family: "Audiowide", sans-serif;
+}
+</style>
+</head>
+Result:
+
+Audiowide Font
+Lorem ipsum dolor sit amet.
+
+123456790
+
+body {
+  background-color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  color: gray;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 60px;
+  color: white;
+}
+Below, we have shown some popular font pairings that will suit many brands and contexts.
+
+ADVERTISEMENT
+
+Georgia and Verdana
+Georgia and Verdana is a classic combination. It also sticks to the web safe font standards:
+
+Example
+Use the "Georgia" font for headings, and "Verdana" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Helvetica and Garamond
+Helvetica and Garamond is another classic combination that uses web safe fonts:
+
+Example
+Use the "Helvetica" font for headings, and "Garamond" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Popular Google Font Pairings
+If you do not want to use standard fonts in HTML, you can use Google Fonts.
+
+Google Fonts are free to use, and have more than 1000 fonts to choose from.
+
+Below are some popular Google Web Font Pairings.
+
+Merriweather and Open Sans
+Example
+Use the "Merriweather" font for headings, and "Open Sans" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Ubuntu and Lora
+Example
+Use the "Ubuntu" font for headings, and "Lora" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Abril Fatface and Poppins
+Example
+Use the "Abril Fatface" font for headings, and "Poppins" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Cinzel and Fauna One
+Example
+Use the "Cinzel" font for headings, and "Fauna One" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Fjalla One and Libre Baskerville
+Example
+Use the "Fjalla One" font for headings, and "Libre Baskerville" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Space Mono and Muli
+Example
+Use the "Space Mono" font for headings, and "Muli" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Spectral and Rubik
+Example
+Use the "Spectral" font for headings, and "Rubik" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Oswald and Noto Sans
+Example
+Use the "Oswald" font for headings, and "Noto Sans" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+p.a {
+  font: 20px Arial, sans-serif;
+}
+
+p.b {
+  font: italic small-caps bold 12px/30px Georgia, serif;
+}

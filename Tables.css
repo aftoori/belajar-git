@@ -1,0 +1,142 @@
+table, th, td {
+  border: 1px solid;
+}
+ADVERTISEMENT
+
+Full-Width Table
+The table above might seem small in some cases. If you need a table that should span the entire screen (full-width), add width: 100% to the <table> element:
+
+Firstname	Lastname
+Peter	Griffin
+Lois	Griffin
+Example
+table {
+  width: 100%;
+}
+Double Borders
+Notice that the table in the examples above have double borders. This is because both the table and the <th> and <td> elements have separate borders.
+
+To remove double borders, take a look at the example below.
+
+Collapse Table Borders
+The border-collapse property sets whether the table borders should be collapsed into a single border:
+
+Firstname	Lastname
+Peter	Griffin
+Lois	Griffin
+Example
+table {
+  border-collapse: collapse;
+}
+If you only want a border around the table, only specify the border property for <table>:
+
+Firstname	Lastname
+Peter	Griffin
+Lois	Griffin
+Example
+table {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  height: 70px;
+}
+To create a table that should only span half the page, use width: 50%:
+
+Firstname	Lastname	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+table {
+  width: 50%;
+}
+td {
+  text-align: center;
+}
+To left-align the content, force the alignment of <th> elements to be left-aligned, with the text-align: left property:
+
+Firstname	Lastname	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+th {
+  text-align: left;
+}
+Vertical Alignment
+The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> or <td>.
+
+By default, the vertical alignment of the content in a table is middle (for both <th> and <td> elements).
+
+The following example sets the vertical text alignment to bottom for <td> elements:
+
+Firstname	Lastname	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+h, td {
+  padding: 15px;
+  text-align: left;
+}
+Horizontal Dividers
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Add the border-bottom property to <th> and <td> for horizontal dividers:
+
+Example
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+Hoverable Table
+Use the :hover selector on <tr> to highlight table rows on mouse over:
+
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+tr:hover {background-color: coral;}
+ADVERTISEMENT
+
+Striped Tables
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
+
+Example
+tr:nth-child(even) {background-color: #f2f2f2;}
+Table Color
+The example below specifies the background color and text color of <th> elements:
+
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+ 
+
+ <div style="overflow-x:auto;">
+
+<table>
+... table content ...
+</table>
+
+</div>

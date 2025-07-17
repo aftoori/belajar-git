@@ -1,0 +1,497 @@
+.flex-container {
+  display: flex;
+}
+
+The CSS properties we use for the flex container are:
+
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+
+The CSS flex-direction Property
+The flex-direction property specifies the display-direction of flex items in the flex container.
+
+The flex-direction property can have one of the following values:
+
+row
+column
+row-reverse
+column-reverse
+Example
+The row value is the default value, and it displays the flex items horizontally (from left to right):
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+Result:
+
+1
+2
+3
+
+Example
+The column value displays the flex items vertically (from top to bottom):
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+Result:
+
+1
+2
+3
+
+Example
+The row-reverse value displays the flex items horizontally (but from right to left):
+
+.flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+Result:
+
+1
+2
+3
+
+Example
+The column-reverse value displays the flex items vertically (but from bottom to top):
+
+.flex-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+Result:
+
+1
+2
+3
+
+The CSS flex-wrap Property
+The flex-wrap property specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line.
+
+The flex-wrap property can have one of the following values:
+
+nowrap
+wrap
+wrap-reverse
+Example
+The nowrap value specifies that the flex items will not wrap (this is default):
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Example
+The wrap value specifies that the flex items will wrap if necessary:
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Example
+The wrap-reverse value specifies that the flex items will wrap if necessary, in reverse order:
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+The CSS flex-flow Property
+The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.
+
+Example
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+The CSS justify-content Property
+The justify-content property is used to align the flex items when they do not use all available space on the main-axis (horizontally).
+
+The justify-content property can have one of the following values:
+
+center
+flex-start
+flex-end
+space-around
+space-between
+space-evenly
+Example
+The center value positions the flex items in the center of the container:
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+Result:
+
+1
+2
+3
+
+Example
+The flex-start value positions the flex items at the beginning of the container (this is default):
+
+.flex-container {
+  display: flex;
+  justify-content: flex-start;
+}
+Result:
+
+1
+2
+3
+
+Example
+The flex-end value positions the flex items at the end of the container:
+
+.flex-container {
+  display: flex;
+  justify-content: flex-end;
+}
+Result:
+
+1
+2
+3
+
+Example
+The space-around value displays the flex items with space around them:
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+Result:
+
+1
+2
+3
+
+Example
+The space-between value displays the flex items with space between them:
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+Result:
+
+1
+2
+3
+
+Example
+The space-evenly value displays the flex items with equal space around them:
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+Result:
+
+1
+2
+3
+
+The CSS align-items Property
+The align-items property is used to align the flex items when they do not use all available space on the cross-axis (vertically).
+
+The align-items property can have one of the following values:
+
+center
+flex-start
+flex-end
+stretch
+baseline
+normal
+In the following examples we use a 200 pixels high container, to better demonstrate the align-items property.
+
+Example
+The center value positions the flex items in the middle of the container:
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+Result:
+
+1
+2
+3
+
+Example
+The flex-start value positions the flex items at the top of the container:
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: flex-start;
+}
+Result:
+
+1
+2
+3
+
+Example
+The flex-end value positions the flex items at the bottom of the container:
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: flex-end;
+}
+Result:
+
+1
+2
+3
+
+Example
+The stretch value stretches the flex items to fill the container (this is equal to "normal" which is default):
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: stretch;
+}
+Result:
+
+1
+2
+3
+
+Example
+The baseline value positions the flex items at the baseline of the container:
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: baseline;
+}
+Note: The example uses different font-size to demonstrate that the items gets aligned by the text baseline:
+
+1
+2
+3
+4
+
+The CSS align-content Property
+The align-content property is used to align the flex lines.
+
+The align-content property is similar to align-items, but instead of aligning flex items, it aligns the flex lines.
+
+The align-content property can have one of the following values:
+
+center
+stretch
+flex-start
+flex-end
+space-around
+space-between
+space-evenly
+In the following examples we use a 600 pixels high container, with the flex-wrap property set to wrap, to better demonstrate the align-content property.
+
+Example
+With center, the flex lines are packed toward the center of the container:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: center;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Example
+With stretch, the flex lines stretch to take up the remaining space of the container (this is default):
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Example
+With flex-start, the flex lines are packed toward the start of the container:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Example
+With flex-end, the flex lines are packed toward the end of the container: 
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Example
+With space-between, the space between the flex lines are equal, but the first item is flush with the start edge of the container, and the last item is flush with the end edge of the container:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Example
+With space-around, the space between the flex lines are equal, but the space before the first item and after the last item is set to half of the space between the flex lines:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Example
+With space-evenly, the flex lines are evenly distributed in the flex container, with equal space on top, bottom and between:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+Result:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Perfect Centering
+In the following example we will solve a common style problem: perfect centering.
+
+SOLUTION: Set both the justify-content and align-items properties to center, and the flex item will be perfectly centered:
+
+Example
+.flex-container {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+

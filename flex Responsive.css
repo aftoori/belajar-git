@@ -1,0 +1,48 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+Another way is to change the percentage of the flex property of the flex items to create different layouts for different screen sizes. Note that we also have to include flex-wrap: wrap; on the flex container for this example to work:
+
+Example
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+}
+
+ADVERTISEMENT
+
+Responsive Image Gallery using Flexbox
+Use flexbox to create a responsive image gallery that varies between four, two or full-width images, depending on screen size:
+
+ 
+Responsive Website using Flexbox
+Use flexbox to create a responsive website, containing a flexible navigation bar and flexible content:
+
+ 
+
+
+ 

@@ -1,0 +1,54 @@
+li {
+  display: inline;
+}
+Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.
+
+The following example displays <span> elements as block elements:
+
+Example
+span {
+  display: block;
+}
+The following example displays <a> elements as block elements:
+
+Example
+a {
+  display: block;
+}
+Hide an Element - display:none or visibility:hidden?
+display:none
+
+Italy
+
+visibility:hidden
+
+Forest
+
+Reset
+
+Lights
+
+Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:
+
+Example
+h1.hidden {
+  display: none;
+}
+visibility:hidden; also hides an element.
+
+However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:
+
+Example
+h1.hidden {
+  visibility: hidden;
+}
+More Examples
+Differences between display: none; and visibility: hidden;
+This example demonstrates display: none; versus visibility: hidden;
+
+Showing more display types
+This example demonstrates some more display types.
+
+Using CSS together with JavaScript to show content
+This example demonstrates how to use CSS and JavaScript to show an element on click.
+

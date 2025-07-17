@@ -1,0 +1,122 @@
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+Add a Breakpoint
+Earlier in this tutorial we made a web page with rows and columns, and it was responsive, but it did not look good on a small screen.
+
+Media queries can help with that. We can add a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.
+
+
+Desktop
+Phone
+
+Example
+Here we use a media query to add a breakpoint at 600px:
+
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
+ADVERTISEMENT
+
+Another Breakpoint
+You can add as many breakpoints as you like.
+
+We will also insert a breakpoint between tablets and mobile phones.
+
+
+Desktop
+Tablet
+Phone
+
+Example
+Here we use media queries to add breakpoints when screen is max 600px, when screen is min 600px, and when screen is min 768px :
+
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
+
+@media only screen and (min-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 3 / span 6;}
+  .item5 {grid-area: 4 / span 6;}
+}
+
+@media only screen and (min-width: 768px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 2 / span 1;}
+  .item5 {grid-area: 3 / span 6;}
+}
+Typical Device Breakpoints
+There are tons of screens and devices with different heights and widths, so it is hard to create an exact breakpoint for each device. To keep things simple you could target five groups:
+
+Example
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+Orientation: Portrait / Landscape
+Media queries can also be used to change layout of a page depending on the orientation of the browser.
+
+You can have a set of CSS properties that will only apply when the browser window is wider than its height, a so called "Landscape" orientation:
+
+Example
+The web page will have a lightblue background if the orientation is in landscape mode:
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}
+Hide Elements With Media Queries
+Another common use of media queries, is to hide elements on different screen sizes:
+
+I will be hidden on small screens.
+Example
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+  div.example {
+    display: none;
+  }
+}
+Change Font Size With Media Queries
+You can also use media queries to change the font size of an element on different screen sizes:
+
+Variable Font Size.
+Example
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}

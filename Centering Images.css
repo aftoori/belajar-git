@@ -1,0 +1,66 @@
+img {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+2. Using display: flex
+Another way to center an image horizontally on a page is to use display: flex.
+
+Here, we put the <img> element inside a <div> container.
+
+We add the following CSS to the div container:
+
+display: flex
+justify-content: center (centers the image horizontally in the div container)
+Then, we set a width for the image. The width of the image must be smaller than the width of the page.
+
+Here is a horizontally centered image using display: flex:
+
+Paris
+Example
+div {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 50%;
+}
+ADVERTISEMENT
+
+Center an Image Vertically
+display: flex is also used to center an image vertically on a page.
+
+Let's say we have a <div> container that is 600px high.
+
+Now we want to center the image vertically in the div container.
+
+Here, we also put the <img> element inside a <div> container.
+
+We add the following CSS to the div container:
+
+display: flex
+justify-content: center (centers the image horizontally in the div container)
+align-items: center (centers the image vertically in the div container)
+height: 600px (the height of the div container)
+Then, we set a height for the image (must be smaller than the height of the container).
+
+Here is a vertically centered image:
+
+Paris
+Example
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  border: 1px solid black;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+}
+
+
+

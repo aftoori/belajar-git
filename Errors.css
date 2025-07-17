@@ -1,0 +1,39 @@
+.bad {
+  color: red
+  background-color: yellow;
+}
+Invalid Property Names
+Using a property name that does not exist will simply be ignored by the browser.
+
+Example
+.bad {
+  colr: blue;
+  font-size: 16px;
+}
+Invalid Values
+Correct properties but invalid values will also be ignored.
+
+Example
+.bad {
+  width: -100px;
+  color: green;
+}
+Unclosed Braces
+If you forget to close a brace }, the entire rule may be ignored.
+
+Example
+.bad {
+  padding: 20px;
+  margin: 10px;
+Extra Colons or Braces
+Typos like extra colons or misplaced braces can cause rules to break.
+
+Example
+.bad {
+  color:: blue;
+}
+Tips to Avoid CSS Errors
+Use a code editor with syntax highlighting.
+Validate your CSS with a CSS linter or validator.
+Write CSS in small sections and test frequently.
+

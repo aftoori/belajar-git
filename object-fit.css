@@ -1,0 +1,87 @@
+img {
+  width: 200px;
+  height: 300px;
+}
+We see that the image is being squished to fit the container of 200x300 pixels (its original aspect ratio is destroyed).
+
+Here is where the object-fit property comes in. The object-fit property can take one of the following values:
+
+fill - This is default. The image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit
+contain - The image keeps its aspect ratio, but is resized to fit within the given dimension
+cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
+none - The image is not resized
+scale-down - the image is scaled down to the smallest version of none or contain
+Using object-fit: cover;
+If we use object-fit: cover; the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit:
+
+Paris
+Example
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+ADVERTISEMENT
+
+Using object-fit: contain;
+If we use object-fit: contain; the image keeps its aspect ratio, but is resized to fit within the given dimension:
+
+Paris
+Example
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+Using object-fit: fill;
+If we use object-fit: fill; the image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit:
+
+Paris
+Example
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: fill;
+}
+Using object-fit: none;
+If we use object-fit: none; the image is not resized:
+
+Paris
+Example
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: none;
+}
+Using object-fit: scale-down;
+If we use object-fit: scale-down; the image is scaled down to the smallest version of none or contain:
+
+Paris
+Example
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: scale-down;
+}
+Another Example
+Here we have two images and we want them to fill the width of 50% of the browser window and 100% of the height.
+
+In the following example we do NOT use object-fit, so when we resize the browser window, the aspect ratio of the images will be destroyed:
+
+Example
+NorwayParis
+
+In the next example, we use object-fit: cover;, so when we resize the browser window, the aspect ratio of the images is preserved:
+
+Example
+NorwayParis
+
+ CSS object-fit More Examples
+The following example demonstrates all the possible values of the object-fit property in one example:
+
+Example
+.fill {object-fit: fill;}
+.contain {object-fit: contain;}
+.cover {object-fit: cover;}
+.scale-down {object-fit: scale-down;}
+.none {object-fit: none;}

@@ -1,0 +1,128 @@
+h1 {
+  text-shadow: 2px 2px;
+}
+Next, add a color to the shadow:
+
+Text shadow effect!
+Example
+h1 {
+  text-shadow: 2px 2px red;
+}
+Then, add a blur effect to the shadow:
+
+Text shadow effect!
+Example
+h1 {
+  text-shadow: 2px 2px 5px red;
+}
+The following example shows a white text with black shadow:
+
+Text shadow effect!
+Example
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+The following example shows a red neon glow shadow:
+
+Text shadow effect!
+Example
+h1 {
+  text-shadow: 0 0 3px #FF0000;
+}
+ADVERTISEMENT
+
+Multiple Shadows
+To add more than one shadow to the text, you can add a comma-separated list of shadows.
+
+The following example shows a red and blue neon glow shadow:
+
+Text shadow effect!
+Example
+h1 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+The following example shows a white text with black, blue, and darkblue shadow:
+
+Text shadow effect!
+Example
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+You can also use the text-shadow property to create a plain border around some text (without shadows):
+
+Border around text!
+Example
+h1 {
+  color: coral;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+div {
+  box-shadow: 10px 10px;
+}
+Specify a Color for the Shadow
+The color parameter defines the color of the shadow.
+
+A <div> element with a lightblue box-shadow
+Example
+Specify a color for the shadow:
+
+div {
+  box-shadow: 10px 10px lightblue;
+}
+Add a Blur Effect to the Shadow
+The blur parameter defines the blur radius. The higher the number, the more blurred the shadow will be.
+
+A <div> element with a 5px blurred, lightblue box-shadow
+Example
+Add a blur effect to the shadow:
+
+div {
+  box-shadow: 10px 10px 5px lightblue;
+}
+Set the Spread Radius of the Shadow
+The spread parameter defines the spread radius. A positive value increases the size of the shadow, a negative value decreases the size of the shadow.
+
+A <div> element with a blurred, lightblue box-shadow, with a spread radius of 12px
+Example
+Set the spread radius of the shadow:
+
+div {
+  box-shadow: 10px 10px 5px 12px lightblue;
+}
+ADVERTISEMENT
+
+Set the inset Parameter
+The inset parameter changes the shadow from an outer shadow (outset) to an inner shadow.
+
+A <div> element with a blurred, lightblue, inset box-shadow
+Example
+Add the inset parameter:
+
+div {
+  box-shadow: 10px 10px 5px lightblue inset;
+}
+Add Multiple Shadows
+An element can also have multiple shadows:
+
+Example
+div {
+  box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+}
+Cards
+You can also use the box-shadow property to create paper-like cards:
+
+1
+January 1, 2021
+
+Norway
+Hardanger, Norway
+
+Example
+div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+ 

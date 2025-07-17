@@ -1,0 +1,276 @@
+<ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+</ul>
+Now let's remove the bullets and the margins and padding from the list:
+
+Example
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+Example explained:
+
+list-style-type: none; - Removes the bullets. A navigation bar does not need list markers
+Set margin: 0; and padding: 0; to remove browser default settings
+The code in the example above is the standard code used in both vertical, and horizontal navigation bars, which you will learn more about in the next chapters.
+
+li a {
+  display: block;
+  width: 60px;
+}
+Example explained:
+
+display: block; - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width (and padding, margin, height, etc. if you want)
+width: 60px; - Block elements take up the full width available by default. We want to specify a 60 pixels width
+You can also set the width of <ul>, and remove the width of <a>, as they will take up the full width available when displayed as block elements. This will produce the same result as our previous example:
+
+Example
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+
+li a {
+  display: block;
+}
+Vertical Navigation Bar Examples
+Create a basic vertical navigation bar with a gray background color and change the background color of the links when the user moves the mouse over them:
+
+Home
+News
+Contact
+About
+Example
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+Active/Current Navigation Link
+Add an "active" class to the current link to let the user know which page he/she is on:
+
+Home
+News
+Contact
+About
+Example
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+Center Links & Add Borders
+Add text-align:center to <li> or <a> to center the links.
+
+Add the border property to <ul> to add a border around the navbar. If you also want borders inside the navbar, add a border-bottom to all <li> elements, except for the last one:
+
+Home
+News
+Contact
+About
+Example
+ul {
+  border: 1px solid #555;
+}
+
+li {
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+Full-height Fixed Vertical Navbar
+Create a full-height, "sticky" side navigation:
+
+
+Example
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+Note: This example might not work properly on mobile devices.
+
+
+ 
+li {
+  display: inline;
+}
+Example explained:
+
+display: inline; - By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line
+Floating List Items
+Another way of creating a horizontal navigation bar is to float the <li> elements, and specify a layout for the navigation links:
+
+Example
+li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+Example explained:
+
+float: left; - Use float to get block elements to float next to each other
+display: block; - Allows us to specify padding (and height, width, margins, etc. if you want)
+padding: 8px; - Specify some padding between each <a> element, to make them look good
+background-color: #dddddd; - Add a gray background-color to each <a> element
+Tip: Add the background-color to <ul> instead of each <a> element if you want a full-width background color:
+
+Example
+ul {
+  background-color: #dddddd;
+}
+Horizontal Navigation Bar Examples
+Create a basic horizontal navigation bar with a dark background color and change the background color of the links when the user moves the mouse over them:
+
+HomeNewsContactAbout
+Example
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+Active/Current Navigation Link
+Add an "active" class to the current link to let the user know which page he/she is on:
+
+HomeNewsContactAbout
+Example
+.active {
+  background-color: #04AA6D;
+}
+Right-Align Links
+Right-align links by floating the list items to the right (float:right;):
+
+HomeNewsContactAbout
+Example
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+</ul>
+Border Dividers
+Add the border-right property to <li> to create link dividers:
+
+HomeNewsContactAbout
+Example
+/* Add a gray right border to all list items, except the last item (last-child) */
+li {
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+Fixed Navigation Bar
+Make the navigation bar stay at the top or the bottom of the page, even when the user scrolls the page:
+
+
+Fixed Top
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+Fixed Bottom
+ul {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+Note: Fixed position might not work properly on mobile devices.
+
+Gray Horizontal Navbar
+An example of a gray horizontal navigation bar with a thin gray border:
+
+HomeNewsContactAbout
+Example
+ul {
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li a {
+  color: #666;
+}
+Sticky Navbar
+Add position: sticky; to <ul> to create a sticky navbar.
+
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+
+Example
+ul {
+  position: sticky;
+  top: 0;
+}
+Note: You must specify at least one of top, right, bottom or left for sticky positioning to work.
+
+ADVERTISEMENT
+
+More Examples
+Responsive Topnav
+How to use CSS media queries to create responsive top navigation.
+
+
+Responsive Sidenav
+How to use CSS media queries to create responsive side navigation.
+
+
+Dropdown Navbar
+How to add a dropdown menu inside a navigation bar.
+
+
+Ever heard about W3Schools Spaces? Here you can create your website from scratch or use a template, and host it for free.
+

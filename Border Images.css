@@ -1,0 +1,56 @@
+#borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
+Here, the middle sections of the image are stretched to create the border:
+
+An image as a border!
+
+Here is the code:
+
+Example
+#borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 stretch;
+}
+Tip: The border-image property is actually a shorthand property for the border-image-source, border-image-slice, border-image-width, border-image-outset and border-image-repeat properties.
+
+ADVERTISEMENT
+
+CSS border-image - Different Slice Values
+Different slice values completely changes the look of the border:
+
+Example 1:
+
+border-image: url(border.png) 50 round;
+
+Example 2:
+
+border-image: url(border.png) 20% round;
+
+Example 3:
+
+border-image: url(border.png) 30% round;
+
+Here is the code:
+
+Example
+#borderimg1 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 50 round;
+}
+
+#borderimg2 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 20% round;
+}
+
+#borderimg3 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30% round;
+}

@@ -1,0 +1,108 @@
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+@property --my-txt-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: darkblue;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+  color: var(--my-txt-color);
+}
+
+ADVERTISEMENT
+
+Another @property Example
+In the following example we use the default custom property on the <div> element. Then we override the custom property in class .fresh and class .nature (by setting some other colors), and it works perfectly fine:
+
+Example
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+}
+
+.fresh {
+  --my-bg-color: #ff6347;
+}
+
+.nature {
+  --my-bg-color: rgb(120, 180, 30);
+}
+
+Avoid Error with Type Checking and Fallback Value
+In the following example we set the custom property in class .nature to an integer. This is not valid, and the browser will use the fallback color, which is defined in the initial-value property (lightgray):
+
+Example
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+}
+
+.fresh {
+  --my-bg-color: #ff6347;
+}
+
+.nature {
+  --my-bg-color: 2;
+}
+
+Use of the inherits Value
+In the following example we will set the inherits value to false. This means that the custom property WILL NOT inherit values from its parent elements. Look at the result:
+
+Example
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: lightgray;
+}
+
+The next example sets the inherits value to true. This means that the custom property WILL inherit values from its parent elements. Look at the result:
+
+Example
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+Create Smooth Animation with @property
+A complete new opportunity you can achieve with the @property rule, is to animate something that could not be animated before: Gradients. Look at the following example:
+
+Example
+Specify two custom properties for a gradient:
+
+@property --startColor {
+  syntax: "<color>";
+  initial-value: #EADEDB;
+  inherits: false;
+}
+
+@property --endColor {
+  syntax: "<color>";
+  initial-value: #BC70A4;
+  inherits: false;
+}

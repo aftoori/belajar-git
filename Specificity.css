@@ -1,0 +1,123 @@
+<html>
+<head>
+  <style>
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p>Hello World!</p>
+
+</body>
+</html>
+
+Now, look at example 2:
+
+Example 2
+Here, we have added a class selector (named "test"), and specified a green color for this class. Result: The text will be green (even though we have specified a red color for the element selector "p"). This is because the class selector has higher priority:
+
+<html>
+<head>
+  <style>
+    .test {color: green;}
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p class="test">Hello World!</p>
+
+</body>
+</html>
+
+Now, look at example 3:
+
+Example 3
+Here, we have added the id selector (named "demo"). Result: The text will be blue, because the id selector has higher priority:
+
+<html>
+<head>
+  <style>
+    #demo {color: blue;}
+    .test {color: green;}
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p id="demo" class="test">Hello World!</p>
+
+</body>
+</html>
+
+Now, look at example 4:
+
+Example 4
+Here, we have added an inline style for the "p" element. Result: The text will be pink, because the inline style has highest priority:
+
+<html>
+<head>
+  <style>
+    #demo {color: blue;}
+    .test {color: green;}
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p id="demo" class="test" style="color: pink;">Hello World!</p>
+
+</body>
+</html>
+
+Specificity Hierarchy
+Every CSS selector has a position in the specificity hierarchy.
+
+Priority	Example	Description
+Inline style	<h1 style="color: pink;">	Highest priority, directly applied with the style attribute
+Id selectors	#navbar	Second highest priority, identified by the unique id attribute of an element
+Classes and pseudo-classes	.test, :hover	Third highest priority, targeted using class names
+Attributes	[type="text"]	Low priority, applies to attributes
+Elements and pseudo-elements	 h1, ::before, ::after	Lowest priority, applies to HTML elements and pseudo-elements
+ADVERTISEMENT
+
+More Specificity Rules Examples
+Equal specificity: the latest rule wins - If the same rule is written twice into the external style sheet, then the latest rule wins:
+
+Example
+h1 {background-color: yellow;}
+h1 {background-color: red;}
+
+ID selectors have a higher specificity than attribute selectors - Look at the following three code lines:
+
+Example
+div#myDiv {background-color: green;}
+#myDiv {background-color: yellow;}
+div[id=myDiv] {background-color: blue;}
+
+the first rule is more specific than the other two, and will therefore be applied.
+
+Contextual selectors are more specific than a single element selector - The embedded style sheet is closer to the element to be styled. So in the following situation
+
+Example
+/*From external CSS file:*/
+#content h1 {background-color: red;}
+
+/*In HTML file:*/
+<style>
+#content h1 {background-color: yellow;}
+</style>
+the last rule will be applied.
+
+A class selector beats any number of element selectors - a class selector such as .intro beats h1, p, div, etc:
+
+Example
+.intro {background-color: yellow;}
+h1 {background-color: red;}
+
+The universal selector (*) and inherited values - The universal selector (*) and inherited values do not impact the specificity weight value:
+
+Example
+* {background-color: yellow;}
+h1 {background-color: red;}
+

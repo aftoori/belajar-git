@@ -1,0 +1,283 @@
+body { background-color: #1e90ff; }
+
+h2 { border-bottom: 2px solid #1e90ff; }
+
+.container {
+  color: #1e90ff;
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+button {
+  background-color: #ffffff;
+  color: #1e90ff;
+  border: 1px solid #1e90ff;
+  padding: 5px;
+}
+
+Syntax of the var() Function
+The var() function is used to insert the value of a CSS variable.
+
+The syntax of the var() function is as follows:
+
+var(--name, value)
+Value	Description
+name	Required. The variable name (must start with two dashes)
+value	Optional. The fallback value (used if the variable is not found)
+Note: The variable name must begin with two dashes (--) and it is case sensitive!
+
+
+How var() Works
+First of all: CSS variables can have a global or local scope.
+
+Global variables can be accessed/used through the entire document, while local variables can be used only inside the selector where it is declared.
+
+To create a variable with global scope, declare it inside the :root selector. The :root selector matches the document's root element.
+
+To create a variable with local scope, declare it inside the selector that is going to use it.
+
+The following example is equal to the example above, but here we use the var() function.
+
+First, we declare two global variables (--blue and --white). Then, we use the var() function to insert the value of the variables later in the style sheet:
+
+Example
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body { background-color: var(--blue); }
+
+h2 { border-bottom: 2px solid var(--blue); }
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}
+
+Advantages of using var() are:
+
+makes the code easier to read (more understandable)
+makes it much easier to change the color values
+To change the blue and white color to a softer blue and white, you just need to change the two variable values:
+
+Example
+:root {
+  --blue: #6495ed;
+  --white: #faf0e6;
+}
+
+body { background-color: var(--blue); }
+
+h2 { border-bottom: 2px solid var(--blue); }
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}
+
+Sometimes we want the variables to change only in a specific section of the page.
+
+Assume we want a different color of blue for button elements. Then, we can re-declare the --blue variable inside the button selector. When we use var(--blue) inside this selector, it will use the local --blue variable value declared here.
+
+We see that the local --blue variable will override the global --blue variable for the button elements:
+
+Example
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  --blue: #0000ff; /* local variable will override global */
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}
+
+ADVERTISEMENT
+
+Add a New Local Variable
+If a variable is to be used at only one single place, we could also have declared a new local variable, like this:
+
+Example
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  --button-blue: #0000ff; /* new local variable */
+  background-color: var(--white);
+  color: var(--button-blue);
+  border: 1px solid var(--button-blue);
+  padding: 5px;
+}
+
+<script>
+// Get the root element
+var r = document.querySelector(':root');
+
+// Create a function for getting a variable value
+function myFunction_get() {
+  // Get the styles (properties and values) for the root
+  var rs = getComputedStyle(r);
+  // Alert the value of the --blue variable
+  alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
+}
+
+// Create a function for setting a variable value
+function myFunction_set() {
+  // Set the value of variable --blue to another value (in this case "lightblue")
+  r.style.setProperty('--blue', 'lightblue');
+}
+</script>
+
+CSS var() Function
+Function	Description
+var()	Inserts the value of a CSS variable
+
+/* Variable declarations */
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+.container {
+  --fontsize: 25px;
+}
+
+/* Styles */
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+  font-size: var(--fontsize);
+}
+
+@media screen and (min-width: 450px) {
+  .container {
+    --fontsize: 50px;
+  }
+}
+
+ADVERTISEMENT
+
+Here is another example where we also change the value of the --blue variable in the @media rule:
+
+Example
+/* Variable declarations */
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+.container {
+  --fontsize: 25px;
+}
+
+/* Styles */
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+  font-size: var(--fontsize);
+}
+
+@media screen and (min-width: 450px) {
+  .container {
+    --fontsize: 50px;
+  }
+   :root {
+    --blue: lightblue;
+  }
+}
+
+     

@@ -1,0 +1,39 @@
+<script>
+const x = document.getElementById("result");
+// Check browser support for SSE
+if(typeof(EventSource) !== "undefined") {
+  var source = new EventSource("demo_sse.php");
+  source.onmessage = function(event) {
+    x.innerHTML += event.data + "<br>";
+  };
+} else {
+  x.innerHTML = "Sorry, no support for server-sent events.";
+}
+</script>
+
+Create a new EventSource object, and specify the URL of the page sending the updates (in this example "demo_sse.php")
+Each time an update is received, the onmessage event occurs
+When an onmessage event occurs, put the received data into the element with id="result"
+
+if(typeof(EventSource) !== "undefined") {
+  // Yes! Server-sent events support!
+  // Some code.....
+} else {
+  // Sorry! No server-sent events support..
+}
+<?php
+header('Content-Type: text/event-stream');
+header('Cache-Control: no-cache');
+
+$time = date('r');
+echo "data: The server time is: {$time}\n\n";
+flush();
+?>
+
+<%
+Response.ContentType = "text/event-stream"
+Response.Expires = -1
+Response.Write("data: The server time is: " & now())
+Response.Flush()
+%>
+

@@ -1,0 +1,110 @@
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+Active and Hoverable Pagination
+«1234567»
+Highlight the current page with an .active class, and use the :hover selector to change the color of each page link when moving the mouse over them:
+
+Example
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+Rounded Active and Hoverable Buttons
+«1234567»
+Add the border-radius property if you want a rounded "active" and "hover" button:
+
+Example
+.pagination a {
+  border-radius: 5px;
+}
+
+.pagination a.active {
+  border-radius: 5px;
+}
+Hoverable Transition Effect
+«1234567»
+Add the transition property to the page links to create a transition effect on hover:
+
+Example
+.pagination a {
+  transition: background-color .3s;
+}
+Bordered Pagination
+«1234567»
+Use the border property to add borders to the pagination:
+
+Example
+.pagination a {
+  border: 1px solid #ddd; /* Gray */
+}
+Rounded Borders
+Tip: Add rounded borders to your first and last link in the pagination:
+
+«1234567»
+Example
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+Space Between Links
+Tip: Add the margin property if you do not want to group the page links:
+
+«1234567»
+Example
+.pagination a {
+  margin: 0 4px; /* 0 is for top and bottom. Feel free to change it */
+}
+Pagination Size
+«1234567»
+Change the size of the pagination with the font-size property:
+
+Example
+.pagination a {
+  font-size: 22px;
+}
+Centered Pagination
+«1234567»
+To center the pagination, wrap a container element (like <div>) around it with text-align:center
+
+Example
+.center {
+  text-align: center;
+}
+More Examples
+Example
+
+Breadcrumbs
+Home Pictures Summer 15 Italy
+Another variation of pagination is so-called "breadcrumbs":
+
+Example
+ul.breadcrumb {
+  padding: 8px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+ul.breadcrumb li {display: inline;}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ 

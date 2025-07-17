@@ -1,0 +1,48 @@
+div {
+  resize: horizontal;
+  overflow: auto;
+}
+The following example lets the user resize only the height of a <div> element:
+
+Example
+div {
+  resize: vertical;
+  overflow: auto;
+}
+The following example lets the user resize both the height and width of a <div> element:
+
+Example
+div {
+  resize: both;
+  overflow: auto;
+}
+In many browsers, <textarea> is resizable by default. Here, we have used the resize property to disable the resizability:
+
+Example
+textarea {
+  resize: none;
+}
+ADVERTISEMENT
+
+CSS Outline Offset
+The outline-offset property adds space between an outline and the edge or border of an element.
+
+This div has an outline 15px outside the border edge.
+Note: Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.
+
+The following example uses the outline-offset property to add space between the border and the outline:
+
+Example
+div.ex1 {
+  margin: 20px;
+  border: 1px solid black;
+  outline: 4px solid red;
+  outline-offset: 15px;
+}
+
+div.ex2 {
+  margin: 10px;
+  border: 1px solid black;
+  outline: 5px dashed blue;
+  outline-offset: 5px;
+}

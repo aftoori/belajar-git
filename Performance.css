@@ -1,0 +1,55 @@
+ul li a.button:hover {
+  background-color: blue;
+}
+Better Example
+.button:hover {
+  background-color: blue;
+}
+2. Avoid Universal Selector for Styling
+Using * affects every element and can slow down page rendering.
+
+Bad Example
+* {
+  margin: 0;
+  padding: 0;
+}
+3. Avoid Inline Styles
+Inline styles make your HTML heavier and are harder to manage and cache.
+
+Bad Example
+<div style="color: red; font-size: 18px;">Hello</div>
+4. Combine and Minify CSS
+Use one CSS file when possible, and remove spaces and comments to reduce file size.
+
+You can use tools like:
+
+CSS Minifier
+PostCSS
+Online compressors
+5. Load CSS Efficiently
+Place your main CSS in the <head> so it loads before your page is rendered.
+
+Example
+<link rel="stylesheet" href="style.css">
+Avoid using @import for loading CSS, as it delays stylesheet loading.
+
+6. Use Shorthand Properties
+Using shorthand properties saves space and is faster to parse.
+
+Example
+/* Long version */
+margin-top: 10px;
+margin-right: 20px;
+margin-bottom: 10px;
+margin-left: 20px;
+
+/* Shorthand version */
+margin: 10px 20px;
+7. Cache Your CSS
+Make sure your CSS file is cached by the browser by giving it a long expiration time in your server settings. This reduces how often users need to re-download it.
+
+Summary
+Keep selectors short and simple
+Avoid layout-thrashing operations
+Use external, minified, and cached stylesheets
+Use efficient hiding and animation techniques
